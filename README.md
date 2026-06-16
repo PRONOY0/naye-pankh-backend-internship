@@ -20,13 +20,37 @@ Install dependencies:
 npm install
 ```
 
+Set up environment variables:
+
+```bash
+cp .env.example .env
+```
+
+Fill in your `DATABASE_URL` and `JWT_SECRET` in the `.env` file.
+
+Generate Prisma client:
+
+```bash
+npx prisma generate
+```
+
+Push the schema to your database:
+
+```bash
+npx prisma db push
+```
+
+Seed the admin user:
+
+```bash
+npx prisma db seed
+```
+
 Run the development server:
 
 ```bash
 npm run dev
 ```
-
-The project uses nodemon for development.
 
 ## Environment Variables
 
